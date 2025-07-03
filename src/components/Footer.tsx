@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import Link from "@mui/material/Link";
 import Typography, { type TypographyProps } from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 
@@ -61,13 +62,19 @@ export default function Footer() {
           }}
         >
           <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
-            <Typography
+            <Link
               variant="body2"
+              underline="none"
+              color="inherit"
               gutterBottom
               sx={{ fontWeight: 600, mt: 2 }}
+              href="https://maps.app.goo.gl/RMayxvhicH3aqx7h8"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               10920 W Flagler St STE 210 <br /> Miami, FL 33174
-            </Typography>
+            </Link>
+
             <Typography variant="body2" sx={{ color: "text.secondary", mb: 2 }}>
               (305) 221-2891
             </Typography>
