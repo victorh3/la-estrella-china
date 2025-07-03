@@ -89,7 +89,9 @@ export default function Footer() {
           }}
           textAlign={{ sm: "right" }}
         >
-          <Box sx={{ display: "flex", justifyContent: "end" }}>
+          <Box
+            sx={{ display: "flex", justifyContent: { xs: "start", sm: "end" } }}
+          >
             <Typography variant="body2" sx={{ fontWeight: "medium" }}>
               Hours of Operation
             </Typography>
