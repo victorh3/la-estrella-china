@@ -1,6 +1,37 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
+import Typography, { type TypographyProps } from "@mui/material/Typography";
+import { styled } from "@mui/material/styles";
+
+const RowContainer = styled(Box)(() => ({
+  display: "flex",
+  justifyContent: "space-between",
+  flexGrow: 1,
+}));
+
+const Day = styled((props: TypographyProps) => (
+  <Typography color="textSecondary" variant="body2" {...props} />
+))(() => ({
+  display: "flex",
+  justifyContent: "space-between",
+  flexGrow: 1,
+  width: "80px",
+}));
+
+const Divider = styled((props: TypographyProps) => (
+  <Typography variant="body2" color="textDisabled" {...props} />
+))(() => ({
+  width: "5px",
+  textAlign: "center",
+  fontWeight: 600,
+  margin: "0 10px",
+}));
+
+const Hours = styled((props: TypographyProps) => (
+  <Typography color="textSecondary" variant="body2" {...props} />
+))(() => ({
+  width: "140px",
+}));
 
 export default function Footer() {
   return (
@@ -47,33 +78,50 @@ export default function Footer() {
             display: { xs: "flex" },
             flexDirection: "column",
             gap: 1,
+            width: "260px",
           }}
           textAlign={{ sm: "right" }}
         >
-          <Typography variant="body2" sx={{ fontWeight: "medium" }}>
-            Hours of Operation
-          </Typography>
-          <Typography color="textSecondary" variant="body2">
-            Monday | 11:00 AM - 9:30 PM
-          </Typography>
-          <Typography color="textSecondary" variant="body2">
-            Tuesday | 11:00 AM - 9:30 PM
-          </Typography>
-          <Typography color="textSecondary" variant="body2">
-            Wednesday | 11:00 AM - 9:30 PM
-          </Typography>
-          <Typography color="textSecondary" variant="body2">
-            Thursday | 11:00 AM - 9:30 PM
-          </Typography>
-          <Typography color="textSecondary" variant="body2">
-            Friday | 11:00 AM - 10:00 PM
-          </Typography>
-          <Typography color="textSecondary" variant="body2">
-            Saturday | 11:00 AM - 10:00 PM
-          </Typography>
-          <Typography color="textSecondary" variant="body2">
-            Sunday | 11:00 AM - 9:30 PM
-          </Typography>
+          <Box sx={{ display: "flex", justifyContent: "end" }}>
+            <Typography variant="body2" sx={{ fontWeight: "medium" }}>
+              Hours of Operation
+            </Typography>
+          </Box>
+          <RowContainer>
+            <Day>Monday</Day>
+            <Divider>|</Divider>
+            <Hours>11:00 AM - 9:30 PM</Hours>
+          </RowContainer>
+          <RowContainer>
+            <Day>Tuesday</Day>
+            <Divider>|</Divider>
+            <Hours>11:00 AM - 9:30 PM</Hours>
+          </RowContainer>
+          <RowContainer>
+            <Day>Wednesday</Day>
+            <Divider>|</Divider>
+            <Hours>11:00 AM - 9:30 PM</Hours>
+          </RowContainer>
+          <RowContainer>
+            <Day>Thursday</Day>
+            <Divider>|</Divider>
+            <Hours>11:00 AM - 9:30 PM</Hours>
+          </RowContainer>
+          <RowContainer>
+            <Day>Friday</Day>
+            <Divider>|</Divider>
+            <Hours>11:00 AM - 10:00 PM</Hours>
+          </RowContainer>
+          <RowContainer>
+            <Day>Saturday</Day>
+            <Divider>|</Divider>
+            <Hours>11:00 AM - 10:00 PM</Hours>
+          </RowContainer>
+          <RowContainer>
+            <Day>Sunday</Day>
+            <Divider>|</Divider>
+            <Hours>11:00 AM - 9:30 PM</Hours>
+          </RowContainer>
         </Box>
       </Box>
     </Container>
