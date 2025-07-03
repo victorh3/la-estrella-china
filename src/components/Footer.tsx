@@ -2,15 +2,6 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 
-function Copyright() {
-  return (
-    <Typography variant="body2" sx={{ color: "text.secondary", mt: 1 }}>
-      {"Copyright © "}
-      {new Date().getFullYear()}
-    </Typography>
-  );
-}
-
 export default function Footer() {
   return (
     <Container
@@ -20,7 +11,6 @@ export default function Footer() {
         alignItems: "center",
         gap: { xs: 4, sm: 8 },
         py: { xs: 8, sm: 10 },
-        textAlign: { sm: "center", md: "left" },
       }}
     >
       <Box
@@ -45,7 +35,7 @@ export default function Footer() {
               gutterBottom
               sx={{ fontWeight: 600, mt: 2 }}
             >
-              10920 W Flagler St STE 210, Miami, FL 33174
+              10920 W Flagler St STE 210 <br /> Miami, FL 33174
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary", mb: 2 }}>
               (305) 221-2891
@@ -54,10 +44,11 @@ export default function Footer() {
         </Box>
         <Box
           sx={{
-            display: { xs: "none", sm: "flex" },
+            display: { xs: "flex" },
             flexDirection: "column",
             gap: 1,
           }}
+          textAlign={{ sm: "right" }}
         >
           <Typography variant="body2" sx={{ fontWeight: "medium" }}>
             Hours of Operation
@@ -84,18 +75,6 @@ export default function Footer() {
             Sunday | 11:00 AM - 9:30 PM
           </Typography>
         </Box>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          pt: { xs: 4, sm: 8 },
-          width: "100%",
-          borderTop: "1px solid",
-          borderColor: "divider",
-        }}
-      >
-        <Copyright />
       </Box>
     </Container>
   );

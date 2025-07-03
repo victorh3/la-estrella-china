@@ -19,7 +19,9 @@ declare module "@mui/material/styles" {
 
 const theme = createTheme({
   palette: {
-    primary: { main: "#0bd3d3" },
+    background: {
+      default: "#f5f5f5",
+    },
   },
 });
 
@@ -27,7 +29,8 @@ export default function MarketingPage() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <CssBaseline enableColorScheme />
+        <CssBaseline />
+
         <Hero />
         <Footer />
       </ThemeProvider>

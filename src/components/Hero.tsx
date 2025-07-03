@@ -27,7 +27,11 @@ export default function Hero() {
               display: "flex",
               flexDirection: { xs: "column", sm: "row" },
               alignItems: "center",
-              fontSize: "clamp(3rem, 10vw, 3.5rem)",
+              fontSize: "clamp(5rem, 10vw, 3.5rem)",
+              fontFamily: `"Long Cang", cursive;`,
+              fontWeight: 400,
+              fontStyle: "normal",
+              textAlign: "center",
             }}
           >
             La Estrella China
@@ -57,6 +61,7 @@ export default function Hero() {
               color="primary"
               size="small"
               sx={{ minWidth: "fit-content" }}
+              href="tel:3052212891"
             >
               Call to order
             </Button>
@@ -65,6 +70,9 @@ export default function Hero() {
               color="primary"
               size="small"
               sx={{ minWidth: "fit-content" }}
+              href="/estrella_menu_20250623.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               View menu
             </Button>
