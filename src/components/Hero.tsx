@@ -70,7 +70,7 @@ export default function Hero() {
               color="primary"
               size="small"
               sx={{ minWidth: "fit-content" }}
-              href="/estrella_menu_20250623.pdf"
+              href="/la-estrella-china/estrella_menu_20250623.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
